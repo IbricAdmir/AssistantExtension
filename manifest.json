@@ -1,0 +1,23 @@
+{
+  "name": "Hulpassistent",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "foto.png"
+  },
+
+"content_scripts": [{
+
+  "matches": ["https://www.google.com/*"],
+  "css": ["popup.css"]
+}]
+
+
+
+
+
+
+
+}

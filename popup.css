@@ -1,0 +1,30 @@
+body {
+    width: 800px;
+    height: 600px;
+  }
+
+h1 {
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+.searchbar {
+
+    text-align: center;
+}
+    
+body html {
+
+    background: url(https://static.nike.com/a/images/f_jpg,q_auto:eco/61b4738b-e1e1-4786-8f6c-26aa0008e80b/swoosh-logo-black.png);
+}
