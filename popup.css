@@ -1,30 +1,52 @@
 body {
-    width: 800px;
-    height: 600px;
+    width: 600px;
+    height: 500px;
+    margin: 0;
   }
 
 h1 {
 
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
+    font-family: 'Anybody', cursive;
+    font-weight: 400;
+    font-size: 50px;
     text-align: center;
 }
 
+img {
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    margin-top: 0;
+    display: flex;
+  }
+
 h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: lighter;
-    font-size: 12px;
+    font-family: 'Anybody', cursive;
+    font-weight: 200;
+    font-size: 20px;
     text-align: center;
+    font-style: italic;
 }
 
 
 .searchbar {
 
     text-align: center;
+    padding-top: 40px;
+    size: 40px;
+}
+
+.searchbar input {
+    height: 40px;
+    width: 250px;
+    font-family: 'Anybody', cursive;
+    font-weight: 200;
+    font-size: 20px;
+    font-style: italic;
 }
     
-body html {
 
-    background: url(https://static.nike.com/a/images/f_jpg,q_auto:eco/61b4738b-e1e1-4786-8f6c-26aa0008e80b/swoosh-logo-black.png);
+.navbar {
+    margin-top: 10px;
+    border-bottom: 1px solid #333;
 }
