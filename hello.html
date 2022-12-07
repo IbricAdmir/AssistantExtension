@@ -1,27 +1,35 @@
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./popup.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./popup.css" />
 
-  <body>
-    <div class="navbar">
-    <h1>Assistant</h1>
-    <img src="avatar.png" alt="logo" />
-    </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="navbar">
+    <nav class="container">
+      <div class="navbar-inner">
+        <img src="avatar.png" alt="logo" width="50px" height="50px">
+        <h1 class="extension-title">Assistant</h1>
+      </div>
+    </nav>
+  </header>
+  <section class="container">
     <h2>Welkom bij de assistant. Typ in het zoekveld het probleem waar u tegenaan loopt.</h2>
     <div class="searchbar">
-    <input type="text" placeholder="Search..">
+      <input type="text" placeholder="Search..">
     </div>
-    <script src="popup.js"></script>
-  </body>
+  </section>
+  <script src="popup.js"></script>
+</body>
+
 </html>
