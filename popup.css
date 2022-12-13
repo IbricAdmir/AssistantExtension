@@ -35,16 +35,25 @@ h2 {
 }
 
 
-.searchbar {
+.zoekbalk {
 
     text-align: center;
     padding-top: 40px;
     size: 40px;
 }
 
-.searchbar input {
+#search-input {
     height: 40px;
     width: 250px;
+    font-family: 'Anybody', cursive;
+    font-weight: 200;
+    font-size: 20px;
+    font-style: italic;
+}
+
+#search-button {
+    height: 40px;
+    width: 80px;
     font-family: 'Anybody', cursive;
     font-weight: 200;
     font-size: 20px;
@@ -61,4 +70,22 @@ h2 {
     border-bottom: 1px solid #333;
     padding: 1rem 0;
     
+}
+
+#scrollbalk {
+
+  height: 120px;
+  width: auto;
+}
+
+#scrollbalk-gif {
+
+    height: 150px;
+    width: auto;
+  }
+
+.voorbeelden-1 {
+
+    display: flex;
+    padding: 10px;
 }

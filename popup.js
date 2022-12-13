@@ -29,7 +29,7 @@ searchButton.addEventListener('click', function() {
 
         // If the keywords match, open the HTML file for the current object in a new browser window or tab
         if (keywordsMatch) {
-            window.open(categorieen[i].html, '_blank');
+            window.open(categorieen[i].html, "_parent");
         }
     }
 });
