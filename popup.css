@@ -87,5 +87,6 @@ h2 {
 .voorbeelden-1 {
 
     display: flex;
-    padding: 10px;
+    margin: 50px 0 0 0;
+    align-items: center;
 }
