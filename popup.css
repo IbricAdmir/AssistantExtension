@@ -1,6 +1,6 @@
 body {
-    width: 600px;
-    height: 500px;
+    width: 800px;
+    height: 600px;
     margin: 0;
 }
 
@@ -49,6 +49,7 @@ h2 {
     font-weight: 200;
     font-size: 20px;
     font-style: italic;
+    outline-color: #8ADA87;
 }
 
 #search-button {
