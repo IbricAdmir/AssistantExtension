@@ -8,6 +8,13 @@ body {
     box-sizing: border-box;
 }
 
+.nav-container {
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
 .container {
     width: 100%;
     padding: 0 2rem;
@@ -49,6 +56,7 @@ h2 {
     font-weight: 200;
     font-size: 20px;
     font-style: italic;
+    outline-color: #2fb166;
 }
 
 #search-button {
@@ -60,11 +68,20 @@ h2 {
     font-style: italic;
 }
 
-.navbar-inner {
+
+.navbar-left {
     display: flex;
     gap: 1rem;
     align-items: center;
 }
+
+.navbar-right {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 
 .navbar {
     border-bottom: 1px solid #333;
@@ -89,4 +106,35 @@ h2 {
     display: flex;
     margin: 50px 0 0 0;
     align-items: center;
+}
+
+.extension-page {
+
+    font-family: 'Anybody', cursive;
+    font-weight: 400;
+    text-align: center;
+}
+
+#filteren {
+
+    height: 250px;
+    width: auto;
+  }
+
+  #filteren-bol {
+
+    height: 250px;
+    width: auto;
+  }
+
+  #filteren, #filteren-bol {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#scrollbalk, #scrollbalk-gif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
