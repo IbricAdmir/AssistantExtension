@@ -1,15 +1,16 @@
+//Array containing objects with all the category's in the extension
 let categorieen = [
     {
         index: 0,
         title: "Scrollen",
-        html: "test.html",
-        keywords: ["scrollen", "scroll", "ik wil scrollen", "scrolling", "hoe moet ik scrollen?"]
+        html: "scrollen.html",
+        keywords: ["scrollen", "scroll", "ik wil scrollen", "scrolling", "hoe moet ik scrollen?", "hoe werkt scrollen?", "scrolling?"]
     },
     {
         index: 1,
         title: "Filteren",
-        html: "test2.html",
-        keywords: ["filteren", "filters", "ik wil filteren", "hoe kan ik filteren?"]
+        html: "filteren.html",
+        keywords: ["filteren", "filters", "ik wil filteren", "hoe kan ik filteren?", "hoe moet ik filteren?", "filters?"]
     },
   ];
 
