@@ -94,13 +94,13 @@ h2 {
 
 #scrollbalk {
 
-  height: 120px;
+  height: 300px;
   width: auto;
 }
 
 #scrollbalk-gif {
 
-    height: 150px;
+    height: 300px;
     width: auto;
   }
 
@@ -140,4 +140,46 @@ h2 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.next-button {
+    height: 40px;
+    width: auto;
+    font-family: 'Anybody', cursive;
+    font-weight: 200;
+    font-size: 20px;
+    font-style: italic;
+    text-decoration: none;
+    color: #000000;  
+    background-color: rgb(237, 237, 237);
+    padding: 10px 24px;
+    border-radius: 10px;
+    border: black solid 1px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+
+}
+
+.back-button {
+    height: 40px;
+    width: auto;
+    font-family: 'Anybody', cursive;
+    font-weight: 200;
+    font-size: 20px;
+    font-style: italic;
+    text-decoration: none;
+    color: #000000;  
+    background-color: rgb(237, 237, 237);
+    padding: 10px 24px;
+    border-radius: 10px;
+    border: black solid 1px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    text-align: center;
+
 }
