@@ -36,22 +36,25 @@ img{
 
 h2 {
     font-family: 'Anybody', cursive;
-    font-weight: 200;
+    font-weight: 400;
     font-size: 20px;
-    text-align: center;
-    font-style: italic;
+    text-align: left;
 }
 
 
 .zoekbalk {
 
-    text-align: center;
-    padding-top: 40px;
     size: 40px;
+    align-items: left;
+    vertical-align: middle;
+    background-color: rgb(203, 139, 139);
+    padding: 40px;
+    border-radius: 5px;
+    
 }
 
 #search-input {
-    height: 40px;
+   padding: 10px;
     width: 250px;
     font-family: 'Anybody', cursive;
     font-weight: 200;
@@ -63,12 +66,18 @@ h2 {
 
 
 #search-button {
-    height: 40px;
-    width: 80px;
+    padding: 10px;
+    width: 100px;
     font-family: 'Anybody', cursive;
     font-weight: 200;
     font-size: 20px;
     font-style: italic;
+}
+
+#loupe {
+
+    width: auto;
+    height: 30px;
 }
 
 
