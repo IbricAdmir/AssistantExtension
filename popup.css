@@ -23,7 +23,7 @@ body {
 
 .extension-title {
 
-    font-family: 'Anybody', cursive;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     text-align: center;
 }
@@ -35,10 +35,26 @@ img{
   }
 
 h2 {
-    font-family: 'Anybody', cursive;
-    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
     font-size: 20px;
     text-align: left;
+    padding-top: 10px;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    text-align: left;
+}
+
+h4 {
+    font-family: 'Anybody', cursive;
+    font-weight: 200;
+    font-size: 20px;
+    text-align: left;
+    font-style: italic;
 }
 
 
@@ -47,16 +63,23 @@ h2 {
     size: 40px;
     align-items: left;
     vertical-align: middle;
-    background-color: rgb(203, 139, 139);
-    padding: 40px;
-    border-radius: 5px;
+    padding-top: 10px;
     
+}
+
+.categorie-buttons {
+
+    size: 40px;
+    align-items: left;
+    vertical-align: middle;
+    padding-top: 10px;
+
 }
 
 #search-input {
    padding: 10px;
     width: 250px;
-    font-family: 'Anybody', cursive;
+    font-family: 'Inter', sans-serif;
     font-weight: 200;
     font-size: 20px;
     font-style: italic;
@@ -67,12 +90,29 @@ h2 {
 
 #search-button {
     padding: 10px;
-    width: 100px;
+    width: 50px;
     font-family: 'Anybody', cursive;
     font-weight: 200;
     font-size: 20px;
     font-style: italic;
+    justify-content: center;
 }
+
+.shadow {
+
+    border: 1px solid;
+    box-shadow: 2px 5px;
+    padding: 0 20px 20px 20px
+}
+
+.shadow-2 {
+
+    border: 1px solid;
+    box-shadow: 2px 5px;
+    padding: 0 20px 20px 20px;
+    margin-top: 10px;
+}
+
 
 #loupe {
 
@@ -107,6 +147,15 @@ h2 {
   width: auto;
 }
 
+#wachtwoord-foto {
+
+    height: 200px;
+    width: auto;
+    display: block;
+    
+
+  }
+
 #scrollbalk-gif {
 
     height: 300px;
@@ -122,7 +171,7 @@ h2 {
 
 .extension-page {
 
-    font-family: 'Anybody', cursive;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     text-align: center;
 }
@@ -151,19 +200,19 @@ h2 {
     margin-right: auto;
 }
 
+
 .next-button {
     height: 40px;
     width: auto;
-    font-family: 'Anybody', cursive;
+    font-family: 'Inter', sans-serif;
     font-weight: 200;
     font-size: 20px;
     font-style: italic;
     text-decoration: none;
-    color: #000000;  
-    background-color: rgb(237, 237, 237);
+    color: #ffffff;  
+    background-color: #2FE2A5;
     padding: 10px 24px;
     border-radius: 10px;
-    border: black solid 1px;
     box-sizing: border-box;
     position: absolute;
     bottom: 20px;
@@ -175,20 +224,84 @@ h2 {
 .back-button {
     height: 40px;
     width: auto;
-    font-family: 'Anybody', cursive;
+    font-family: 'Inter', sans-serif;
     font-weight: 200;
     font-size: 20px;
     font-style: italic;
     text-decoration: none;
-    color: #000000;  
-    background-color: rgb(237, 237, 237);
+    color: #ffffff;  
+    background-color: #FE7D67;
     padding: 10px 24px;
     border-radius: 10px;
-    border: black solid 1px;
     box-sizing: border-box;
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    right: 140px;
     text-align: center;
 
+}
+
+.account {
+
+    width: auto;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    font-style: italic;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 2px solid #2FE2A5;
+    color: #2FE2A5;
+    border-radius: 2px;
+
+}
+
+.wachtwoord {
+
+    width: auto;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    font-style: italic;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 2px solid #2FE2A5;
+    color: #2FE2A5;
+    border-radius: 2px;
+
+}
+
+.fout {
+    width: auto;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    font-style: italic;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 2px solid #2FE2A5;
+    color: #2FE2A5;
+    border-radius: 2px;
+
+}
+
+.box {
+
+    border: 1px solid rgb(130, 130, 130);
+    padding: 30px 10px 30px 10px;
+    justify-content: center;
+    display: flex;
+    border-radius: 2px;
+    
+}
+
+.search-container {
+
+    display: flex;
 }

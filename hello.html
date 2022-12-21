@@ -13,6 +13,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -30,9 +35,24 @@
   <section class="container">
     <h2>Hallo Leonie,<br><br>Wat voor probleem ervaar je?</h2>
     <div class="zoekbalk">
-      <input type="text" id="search-input" placeholder="Zoeken...">
+      <div class="shadow">
+        <h3>Typ je vraag of probleem in.</h3>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Zoeken...">
       <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+      </div>
+      </div>
     </div>
+
+    <div class="categorie-buttons">
+      <div class="shadow-2">
+        <h3>Waar loop je tegenaan?</h3>
+        <a class="account" href="#" target="_parent">Account aanmaken</a>
+        <a class="wachtwoord" href="wachtwoord.html" target="_parent">Wachtwoord vergeten</a>
+        <a class="fout" href="#" target="_parent">Fout melding</a>
+        
+    </div>
+
   </section>
   <script src="popup.js"></script>
 </body>

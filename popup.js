@@ -12,6 +12,12 @@ let categorieen = [
         html: "filteren.html",
         keywords: ["filteren", "filters", "ik wil filteren", "hoe kan ik filteren?", "hoe moet ik filteren?", "filters?"]
     },
+    {
+        index: 2,
+        title: "Wachtwoord vergeten",
+        html: "wachtwoord.html",
+        keywords: ["wachtwoord", "wachtwoord vergeten", "ik weet mijn wachtwoord niet meer", "wat is mijn wachtwoord?", "hoe moet ik mijn wachtwoord veranderen?", "wachtwoorden"]
+    },
   ];
 
 // Get references to the search input and button
