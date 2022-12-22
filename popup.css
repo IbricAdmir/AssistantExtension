@@ -18,8 +18,26 @@ body {
 .container {
     width: 100%;
     padding: 0 2rem;
+    
 
 }
+
+.btn-home {
+    background-color: rgb(255, 255, 255);
+    border: solid 2px #2FE2A5;
+    color: #2FE2A5;
+    padding: 16px 16px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+  }
+
+  .btn-home:hover {
+    background-color: #2FE2A5; /* Green */
+    color: white;
+
+  }
 
 .extension-title {
 
@@ -83,19 +101,29 @@ h4 {
     font-weight: 200;
     font-size: 20px;
     font-style: italic;
-    outline-color: #2fb166;
+    outline-color: #2FE2A5;
+    border: solid black;
+
 
 }
 
 
 #search-button {
-    padding: 10px;
     width: 50px;
     font-family: 'Anybody', cursive;
     font-weight: 200;
     font-size: 20px;
     font-style: italic;
     justify-content: center;
+    transition-duration: 0.3s;
+    border: solid black;
+    
+}
+
+#search-button:hover {
+    background-color: #c1c0c0; /* Green */
+    color: rgb(0, 0, 0);
+    
 }
 
 .shadow {
@@ -202,12 +230,10 @@ h4 {
 
 
 .next-button {
-    height: 40px;
     width: auto;
     font-family: 'Inter', sans-serif;
     font-weight: 200;
     font-size: 20px;
-    font-style: italic;
     text-decoration: none;
     color: #ffffff;  
     background-color: #2FE2A5;
@@ -218,16 +244,20 @@ h4 {
     bottom: 20px;
     right: 20px;
     text-align: center;
+    transition-duration: 0.3s;
 
 }
 
+.next-button:hover {
+    background-color: #35b58a; /* Green */
+    color: white;
+}
+
 .back-button {
-    height: 40px;
     width: auto;
     font-family: 'Inter', sans-serif;
     font-weight: 200;
     font-size: 20px;
-    font-style: italic;
     text-decoration: none;
     color: #ffffff;  
     background-color: #FE7D67;
@@ -238,8 +268,30 @@ h4 {
     bottom: 20px;
     right: 140px;
     text-align: center;
+    transition-duration: 0.3s;
 
 }
+
+.back-button:hover {
+    background-color: #ed5c42; /* Green */
+    color: white;
+
+}
+
+.account:hover {
+    background-color: #2FE2A5; /* Green */
+    color: white;
+  }
+
+  .wachtwoord:hover {
+    background-color: #2FE2A5; /* Green */
+    color: white;
+  }
+
+  .fout:hover {
+    background-color: #2FE2A5; /* Green */
+    color: white;
+  }
 
 .account {
 
@@ -247,7 +299,6 @@ h4 {
     font-family: 'Inter', sans-serif;
     font-weight: 200;
     font-size: 20px;
-    font-style: italic;
     text-decoration: none;
     display: inline-block;
     padding: 10px;
@@ -255,6 +306,7 @@ h4 {
     border: 2px solid #2FE2A5;
     color: #2FE2A5;
     border-radius: 2px;
+    transition-duration: 0.3s;
 
 }
 
@@ -264,7 +316,6 @@ h4 {
     font-family: 'Inter', sans-serif;
     font-weight: 200;
     font-size: 20px;
-    font-style: italic;
     text-decoration: none;
     display: inline-block;
     padding: 10px;
@@ -272,6 +323,7 @@ h4 {
     border: 2px solid #2FE2A5;
     color: #2FE2A5;
     border-radius: 2px;
+    transition-duration: 0.3s;
 
 }
 
@@ -280,7 +332,6 @@ h4 {
     font-family: 'Inter', sans-serif;
     font-weight: 200;
     font-size: 20px;
-    font-style: italic;
     text-decoration: none;
     display: inline-block;
     padding: 10px;
@@ -288,6 +339,7 @@ h4 {
     border: 2px solid #2FE2A5;
     color: #2FE2A5;
     border-radius: 2px;
+    transition-duration: 0.3s;
 
 }
 
@@ -298,10 +350,12 @@ h4 {
     justify-content: center;
     display: flex;
     border-radius: 2px;
+    box-shadow: 2px 5px;
     
 }
 
 .search-container {
 
     display: flex;
+    gap: 3px
 }
