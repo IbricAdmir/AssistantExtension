@@ -57,3 +57,52 @@ searchButton.addEventListener('click', function() {
         }
     }
 });
+
+//Currently it has opened a html page.
+
+//But when you close the extension and open it again it will automatically open the default page stored in the manifest.
+
+
+
+chrome.tabs.onRemoved.addListener(function(tabId, removeInfo) {
+
+    // Get the current page
+    var currentPage = categorieen[i].html;
+
+    // Use the localStorage API to store the current page
+    localStorage.setItem('currentPage', currentPage);
+    console.log ("Page is stored")
+  
+  });
+  
+   
+  
+  chrome.runtime.onStartup.addListener(function() {
+      // Retrieve the stored page from localStorage
+      var storedPage = localStorage.getItem('currentPage');
+
+      if(storedPage == 'true'){
+        this.toggleContrastMode();
+      }
+
+      // Navigate to the stored page
+  
+      window.location.href = storedPage;
+  
+    });
+
+/* Store the current page in local storage when the extension is closed
+window.onbeforeunload = function() {
+    localStorage.setItem("currentPage", categorieen[i].html);
+    console.log("Current page stored in local storage: " + categorieen[i].html);
+  }
+  
+
+// Retrieve the current page from local storage and open it when the extension is opened again
+window.onload = function() {``
+    let currentPage = localStorage.getItem("currentPage");
+    if (currentPage) {
+        categorieen[i].html = currentPage;
+    }
+  }
+*/
