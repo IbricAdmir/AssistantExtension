@@ -1,3 +1,33 @@
+window.onload = function() {
+  var storedPage = localStorage.getItem('currentPage');
+
+  if (storedPage) {
+    localStorage.removeItem('currentPage');
+    window.location.href = storedPage;
+  }
+}
+
+document.onvisibilitychange = function(event) {
+  var storedPage = localStorage.getItem('currentPage');
+  console.log('storedPage', storedPage);
+  console.log('document.visibilityState', document.visibilityState);
+
+  if (document.visibilityState === 'hidden') {
+    localStorage.setItem('currentPage', 'chrome-extension://ojfagkpjompcglhkegngogjakehebkap/wachtwoord.html');
+  }
+
+
+  // if (!storedPage && document.visibilityState === 'hidden') {
+  //   localStorage.setItem('currentPage', document.URL);
+  // }
+  // else {
+  //   if (storedPage !== document.URL) {
+  //     if (document.visibilityState === 'hidden') {
+  //       localStorage.setItem('currentPage', document.URL);
+  //     }
+  //   }
+  // }
+}
 //Array containing objects with all the category's in the extension
 let categorieen = [
     {
@@ -25,39 +55,38 @@ let searchInput = document.getElementById('search-input');
 let searchButton = document.getElementById('search-button');
 
 searchInput.addEventListener("keyup", (event) => {
-    if (event.key === "Enter") {
-      // Get the search query from the input field
-    let query = searchInput.value;
- 
-    // For loop to iterate over the categorieen array
-    for (let i = 0; i < categorieen.length; i++) {
-        // Check if the keywords property of the current object in the array includes the search query
-        let keywordsMatch = categorieen[i].keywords.includes(query);
- 
-        // If the keywords match, open the HTML file for the current object in a new browser window or tab
-        if (keywordsMatch) {
-            window.open(categorieen[i].html, "_parent");
-        }
-    }
-  }});
+  if (event.key === "Enter") {
+    // Get the search query from the input field
+  let query = searchInput.value;
+
+  // For loop to iterate over the categorieen array
+  for (let i = 0; i < categorieen.length; i++) {
+      // Check if the keywords property of the current object in the array includes the search query
+      let keywordsMatch = categorieen[i].keywords.includes(query);
+
+      // If the keywords match, open the HTML file for the current object in a new browser window or tab
+      if (keywordsMatch) {
+          window.open(categorieen[i].html, "_parent");
+      }
+  }
+}});
 
 // Add an event listener to the search button
 searchButton.addEventListener('click', function() {
-    // Get the search query from the input field
-    let query = searchInput.value;
+  // Get the search query from the input field
+  let query = searchInput.value;
 
-    // for loop to iterate over the categorieen array
-    for (let i = 0; i < categorieen.length; i++) {
-        // Check if the keywords property of the current object in the array includes the search query
-        let keywordsMatch = categorieen[i].keywords.includes(query);
+  // for loop to iterate over the categorieen array
+  for (let i = 0; i < categorieen.length; i++) {
+      // Check if the keywords property of the current object in the array includes the search query
+      let keywordsMatch = categorieen[i].keywords.includes(query);
 
-        // If the keywords match, open the HTML file for the current object in a new browser window or tab
-        if (keywordsMatch) {
-            window.open(categorieen[i].html, "_parent");
-        }
-    }
+      // If the keywords match, open the HTML file for the current object in a new browser window or tab
+      if (keywordsMatch) {
+          window.open(categorieen[i].html, "_parent");
+      }
+  }
 });
-
 //Currently it has opened a html page.
 
 //But when you close the extension and open it again it will automatically open the default page stored in the manifest.
@@ -78,6 +107,7 @@ chrome.tabs.onRemoved.addListener(function(tabId, removeInfo) {
    
   
   chrome.runtime.onStartup.addListener(function() {
+      console.log('started');
       // Retrieve the stored page from localStorage
       var storedPage = localStorage.getItem('currentPage');
 
