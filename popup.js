@@ -1,20 +1,20 @@
-window.onload = function() {
-  var storedPage = localStorage.getItem('currentPage');
+// window.onload = function() {
+//   var storedPage = localStorage.getItem('currentPage');
 
-  if (storedPage) {
-    localStorage.removeItem('currentPage');
-    window.location.href = storedPage;
-  }
-}
+//   if (storedPage) {
+//     localStorage.removeItem('currentPage');
+//     window.location.href = storedPage;
+//   }
+// }
 
-document.onvisibilitychange = function(event) {
-  var storedPage = localStorage.getItem('currentPage');
-  console.log('storedPage', storedPage);
-  console.log('document.visibilityState', document.visibilityState);
+// document.onvisibilitychange = function(event) {
+//   var storedPage = localStorage.getItem('currentPage');
+//   console.log('storedPage', storedPage);
+//   console.log('document.visibilityState', document.visibilityState);
 
-  if (document.visibilityState === 'hidden') {
-    localStorage.setItem('currentPage', 'chrome-extension://ojfagkpjompcglhkegngogjakehebkap/wachtwoord.html');
-  }
+//   if (document.visibilityState === 'hidden') {
+//     localStorage.setItem('currentPage', 'chrome-extension://ojfagkpjompcglhkegngogjakehebkap/wachtwoord.html');
+//   }
 
 
   // if (!storedPage && document.visibilityState === 'hidden') {
@@ -27,7 +27,9 @@ document.onvisibilitychange = function(event) {
   //     }
   //   }
   // }
-}
+// }
+
+
 //Array containing objects with all the category's in the extension
 let categorieen = [
     {
@@ -93,33 +95,33 @@ searchButton.addEventListener('click', function() {
 
 
 
-chrome.tabs.onRemoved.addListener(function(tabId, removeInfo) {
+// chrome.tabs.onRemoved.addListener(function(tabId, removeInfo) {
 
-    // Get the current page
-    var currentPage = categorieen[i].html;
+//     // Get the current page
+//     var currentPage = categorieen[i].html;
 
-    // Use the localStorage API to store the current page
-    localStorage.setItem('currentPage', currentPage);
-    console.log ("Page is stored")
+//     // Use the localStorage API to store the current page
+//     localStorage.setItem('currentPage', currentPage);
+//     console.log ("Page is stored")
   
-  });
+//   });
   
    
   
-  chrome.runtime.onStartup.addListener(function() {
-      console.log('started');
-      // Retrieve the stored page from localStorage
-      var storedPage = localStorage.getItem('currentPage');
+//   chrome.runtime.onStartup.addListener(function() {
+//       console.log('started');
+//       // Retrieve the stored page from localStorage
+//       var storedPage = localStorage.getItem('currentPage');
 
-      if(storedPage == 'true'){
-        this.toggleContrastMode();
-      }
+//       if(storedPage == 'true'){
+//         this.toggleContrastMode();
+//       }
 
-      // Navigate to the stored page
+//       // Navigate to the stored page
   
-      window.location.href = storedPage;
+//       window.location.href = storedPage;
   
-    });
+//     });
 
 /* Store the current page in local storage when the extension is closed
 window.onbeforeunload = function() {
