@@ -1,11 +1,11 @@
 // window.onload = function() {
-//   var storedPage = localStorage.getItem('currentPage');
+//    var storedPage = localStorage.getItem('currentPage');
 
-//   if (storedPage) {
-//     localStorage.removeItem('currentPage');
-//     window.location.href = storedPage;
-//   }
-// }
+//    if (storedPage) {
+//      localStorage.removeItem('currentPage');
+//      window.location.href = storedPage;
+//    }
+//  }
 
 // document.onvisibilitychange = function(event) {
 //   var storedPage = localStorage.getItem('currentPage');
@@ -29,23 +29,30 @@
   // }
 // }
 
+// Save data to storage locally, in just this browser...
+
+window.onload = function(){
+  // code to run after opening the window
+  chrome.storage.local.get(/* String or Array */["last visited page"], function(items){
+    //  items = [ { "phasersTo": "awesome" } ]
+    console.log('laatste pagina openen..', items);
+  });
+}
+
 
 //Array containing objects with all the category's in the extension
 let categorieen = [
     {
-        index: 0,
         title: "Scrollen",
         html: "scrollen.html",
         keywords: ["scrollen", "scroll", "ik wil scrollen", "scrolling", "hoe moet ik scrollen?", "hoe werkt scrollen?", "scrolling?"]
     },
     {
-        index: 1,
         title: "Filteren",
         html: "filteren.html",
         keywords: ["filteren", "filters", "ik wil filteren", "hoe kan ik filteren?", "hoe moet ik filteren?", "filters?"]
     },
     {
-        index: 2,
         title: "Wachtwoord vergeten",
         html: "wachtwoord.html",
         keywords: ["wachtwoord", "wachtwoord vergeten", "ik weet mijn wachtwoord niet meer", "wat is mijn wachtwoord?", "hoe moet ik mijn wachtwoord veranderen?", "wachtwoorden"]
@@ -89,6 +96,14 @@ searchButton.addEventListener('click', function() {
       }
   }
 });
+
+window.onunload = function(){
+  // code to run before closing the tab
+  chrome.storage.local.set({ "last visited page": "scrollen.html" }, function(){
+    //  Data's been saved boys and girls, go on home
+    console.log('pagina opgeslagen!');
+  });
+}
 //Currently it has opened a html page.
 
 //But when you close the extension and open it again it will automatically open the default page stored in the manifest.
