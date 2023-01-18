@@ -31,13 +31,32 @@
 
 // Save data to storage locally, in just this browser...
 
+// window.onload = function(){
+//   // code to run after opening the window
+//   chrome.storage.local.get(/* String or Array */["last visited page"], function(items){
+//     //  items = [ { "phasersTo": "awesome" } ]
+//     console.log('laatste pagina openen..', items);
+//   });
+// }
+
 window.onload = function(){
-  // code to run after opening the window
-  chrome.storage.local.get(/* String or Array */["last visited page"], function(items){
-    //  items = [ { "phasersTo": "awesome" } ]
-    console.log('laatste pagina openen..', items);
+  chrome.storage.local.get(["last visited page"], function(items){
+    console.log('last visited page:', items);
+    let lastVisitedPage = items["last visited page"];
+    let found = false;
+    for (let i = 0; i < categorieen.length; i++) {
+      if(categorieen[i].html === lastVisitedPage) {
+        window.open(categorieen[i].html, "_parent");
+        found = true;
+        break;
+      }
+    }
+    if(!found) {
+      console.log("last visited page not found");
+    }
   });
 }
+
 
 
 //Array containing objects with all the category's in the extension
@@ -97,13 +116,20 @@ searchButton.addEventListener('click', function() {
   }
 });
 
+// window.onunload = function(){
+//   // code to run before closing the tab
+//   chrome.storage.local.set({ "last visited page": "scrollen.html" }, function(){
+//     //  Data's been saved boys and girls, go on home
+//     console.log('pagina opgeslagen!');
+//   });
+// }
+
 window.onunload = function(){
-  // code to run before closing the tab
-  chrome.storage.local.set({ "last visited page": "scrollen.html" }, function(){
-    //  Data's been saved boys and girls, go on home
+  chrome.storage.local.set({ "last visited page": window.location.href }, function(){
     console.log('pagina opgeslagen!');
   });
 }
+
 //Currently it has opened a html page.
 
 //But when you close the extension and open it again it will automatically open the default page stored in the manifest.
