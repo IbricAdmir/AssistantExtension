@@ -1,0 +1,101 @@
+// window.onload = function() {
+//    var storedPage = localStorage.getItem('currentPage');
+
+//    if (storedPage) {
+//      localStorage.removeItem('currentPage');
+//      window.location.href = storedPage;
+//    }
+//  }
+
+// document.onvisibilitychange = function(event) {
+//   var storedPage = localStorage.getItem('currentPage');
+//   console.log('storedPage', storedPage);
+//   console.log('document.visibilityState', document.visibilityState);
+
+//   if (document.visibilityState === 'hidden') {
+//     localStorage.setItem('currentPage', 'chrome-extension://ojfagkpjompcglhkegngogjakehebkap/wachtwoord.html');
+//   }
+
+
+  // if (!storedPage && document.visibilityState === 'hidden') {
+  //   localStorage.setItem('currentPage', document.URL);
+  // }
+  // else {
+  //   if (storedPage !== document.URL) {
+  //     if (document.visibilityState === 'hidden') {
+  //       localStorage.setItem('currentPage', document.URL);
+  //     }
+  //   }
+  // }
+// }
+
+// Save data to storage locally, in just this browser...
+
+// window.onload = function(){
+//   // code to run after opening the window
+//   chrome.storage.local.get(/* String or Array */["last visited page"], function(items){
+//     //  items = [ { "phasersTo": "awesome" } ]
+//     console.log('laatste pagina openen..', items);
+//   });
+// }
+
+
+
+// window.onunload = function(){
+//   // code to run before closing the tab
+//   chrome.storage.local.set({ "last visited page": "scrollen.html" }, function(){
+//     //  Data's been saved boys and girls, go on home
+//     console.log('pagina opgeslagen!');
+//   });
+// }
+
+
+//Currently it has opened a html page.
+
+//But when you close the extension and open it again it will automatically open the default page stored in the manifest.
+
+
+
+// chrome.tabs.onRemoved.addListener(function(tabId, removeInfo) {
+
+//     // Get the current page
+//     var currentPage = categorieen[i].html;
+
+//     // Use the localStorage API to store the current page
+//     localStorage.setItem('currentPage', currentPage);
+//     console.log ("Page is stored")
+  
+//   });
+  
+   
+  
+//   chrome.runtime.onStartup.addListener(function() {
+//       console.log('started');
+//       // Retrieve the stored page from localStorage
+//       var storedPage = localStorage.getItem('currentPage');
+
+//       if(storedPage == 'true'){
+//         this.toggleContrastMode();
+//       }
+
+//       // Navigate to the stored page
+  
+//       window.location.href = storedPage;
+  
+//     });
+
+/* Store the current page in local storage when the extension is closed
+window.onbeforeunload = function() {
+    localStorage.setItem("currentPage", categorieen[i].html);
+    console.log("Current page stored in local storage: " + categorieen[i].html);
+  }
+  
+
+// Retrieve the current page from local storage and open it when the extension is opened again
+window.onload = function() {``
+    let currentPage = localStorage.getItem("currentPage");
+    if (currentPage) {
+        categorieen[i].html = currentPage;
+    }
+  }
+*/
